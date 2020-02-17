@@ -10,3 +10,22 @@ $brand-color: rgb(247, 196, 28);
 .site-title {
   color: $brand-color;
 }
+
+.post-list-heading {
+  background: $brand-color;
+  text-align: center;
+  color: white;
+  height: 30vh;
+  line-height: 30vh;
+  font-size: 3.5em;
+}
+
+@include media-query($on-palm) {
+    .wrapper {
+      padding-right: $spacing-unit / 2;
+      padding-left: $spacing-unit / 2;
+    }
+    .post-list-heading {
+      font-size: 2.5em;
+    }
+  }
