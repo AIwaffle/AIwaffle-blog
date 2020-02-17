@@ -3,5 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 $base-font-family: Nunito, Roboto, Helvetica, sans-serif;
+$brand-color: rgb(247, 196, 28);
 
 @import "{{ site.theme }}";
+
+.site-title {
+  color: $brand-color;
+}
