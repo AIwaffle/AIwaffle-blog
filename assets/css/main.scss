@@ -7,8 +7,16 @@ $brand-color: rgb(247, 196, 28);
 
 @import "{{ site.theme }}";
 
+$title-font-size: 1.625 * $base-font-size;
+
 .site-title {
   color: $brand-color;
+}
+
+.header-logo {
+  width: $title-font-size;
+  position: relative;
+  top: -3px;
 }
 
 .post-list-heading {
