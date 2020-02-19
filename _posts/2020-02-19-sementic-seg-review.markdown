@@ -144,8 +144,6 @@ Capture objects & contexts at multiple scales
 CRF 过于缓慢, 且难以训练 即 不适合back propagation
 在Deeplab v3中被丢弃
 
-https://blog.csdn.net/Dlyldxwl/article/details/81148810
-
 ## RefineNet
 ## PSPNet
 ## Large Kernel Matters
@@ -163,8 +161,6 @@ https://blog.csdn.net/Dlyldxwl/article/details/81148810
 ![image.png](https://i.loli.net/2020/01/28/PrCheXcnNU8HBaR.png)
 
 ## Deeplab v3+ (SOTA)
-**说好的不能downsample+upsample的呢?**
-
 **Motivation**:  
 之前的模型e.g.PSPNet, 虽然提取了high level feature, 却没有足够的关于object boundary的信息来达成更精细的分割. 若用astrous convolution来维持较大的resolution, 在较深网络中计算量太大. *As in the figure below, note the difference in feature map sizes*
 
