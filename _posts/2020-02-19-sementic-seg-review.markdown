@@ -141,8 +141,6 @@ Capture objects & contexts at multiple scales
 利用相邻pixel的关系, e.g. 颜色相近的相邻像素更有可能属于同一类
 用二元势函数描述像素和像素之间的关系, 用以细化边缘
 
-CRF的数学原理理解不能...
-
 CRF 过于缓慢, 且难以训练 即 不适合back propagation
 在Deeplab v3中被丢弃
 
@@ -152,7 +150,7 @@ https://blog.csdn.net/Dlyldxwl/article/details/81148810
 ## PSPNet
 ## Large Kernel Matters
 ## Deeplab v3
-这篇[paper](https://arxiv.org/pdf/1706.05587.pdf)把简单的事情说得非常复杂! 
+[paper](https://arxiv.org/pdf/1706.05587.pdf)
 
 **Motivation**:
 * 深入研究ASPP module
@@ -181,7 +179,7 @@ depthwise separable convolution: 每个kernel仅对一个通道卷积, 即$N = \
 
 **Contribution**:  
 * A state-of-the-art model
-* *Cited from original paper*: Can control the feature size to trade speed and accuracy (难道其他模型不是?)
+* *Cited from original paper*: Can control the feature size to trade speed and accuracy
 * 更加确定了encoder-decoder架构的优越性
 
 ![image.png](https://i.loli.net/2020/01/28/u1c6oxWJUaDHZ3Q.png)  
