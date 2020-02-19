@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Intro to Machine Learning"
-date:   2020-02-19 18:57:00 +0800
-categories: ML
+title:  "A Review on Semantic Segmentation"
+date:   2020-02-17 10:21:42 -0500
+categories: intro
 ---
 # Intro to Machine Learning
 
