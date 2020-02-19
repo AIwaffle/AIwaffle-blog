@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "A Review on Semantic Segmentation"
