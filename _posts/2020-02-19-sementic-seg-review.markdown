@@ -143,6 +143,7 @@ Capture objects & contexts at multiple scales
 
 CRF 过于缓慢, 且难以训练 即 不适合back propagation
 在Deeplab v3中被丢弃
+However, CRF is still used in industrial models.
 
 ## RefineNet
 ## PSPNet
