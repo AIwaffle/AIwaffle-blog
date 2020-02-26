@@ -170,6 +170,21 @@ int main()
 ![20feb_gold3.png](https://i.loli.net/2020/02/26/2VjI8gwJT6mp4n9.png)
 
 This is a relatively easy problem. 
+Clearly we must deal with the leaves first, so we can approach this problem **bottom-up**
+We can maintain a attribute $l$ on each node representing the length of the path though the root which was left incomplete.
+
+For example, the leaves have $l=0$
+The parents of the leaves have $l=1$
+$l$ should be always less than $K$, otherwise it can be divided into $K$ and $l - K$
+
+For every root node, we **must** match some $l$ with $K - l$ to form a complete path. All except at most one $l$ from the children **must** be paired, because only one incomplete path can be completed by propagating up via the root. We can employ a effective pruning with this property.
+
+The integer matching can be done with `multiset` but will yield a TLE in the 3rd test case. Preferred method is to use a `array` as a `hash map` and to manually clear it. The latter method runs in $O(N)$ amortized.
+
+The last optimization is to only try $K$s such that $K | (N-1)$. Then we only need to check $d(N)$ times.
+Finally, we can solve this problem in $O(N \times d(N))$ time.
+
+PS: the "Star" in Farmer John's mind may be different to what you think.
 
 ```c++
 // Author: Yulun Wu
