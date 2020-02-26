@@ -19,13 +19,17 @@ Moreover, a permutation transform has the associative property. Therefore we can
 # Silver 2
 ![20feb_silver2.png](https://i.loli.net/2020/02/26/HAzN6tPlYV4W3JS.png)
 
-Consider a vertex $v$ , the sum of the area of **all possible triangles right angled at $v$** can be represented by the product of two components:
+Consider a vertex $v$, the sum of the area of **all possible triangles right angled at $v$** can be represented by the product of two components:
 $$\text{horizontal component} = \sum_{v \ne i} |x_v - x_i|, y_v = y_i$$
 $$\text{vertical component} = \sum_{v \ne i} |y_v - y_i|, x_v = x_i$$
-Since we want two times the area, 
-$$ans = \text{horizontal component} \times \text{vertical component}$$
 
 We can iterate every rows and columns to possess these components, and store the information of each point by using a `map` from $(x, y)$ to $(\text{component1}, \text{component2})$
+
+Since we want two times the area, 
+$$area_v = \text{horizontal component of }v \times \text{vertical component of } v$$
+
+$area_v$ stands for $2$ times the sum of the area of **all possible triangles right angled at** $v$
+Then, the answer is $\sum area_v$
 
 The time complexity of the approach is $O(N\log N)$
 
@@ -33,11 +37,11 @@ The time complexity of the approach is $O(N\log N)$
 ![20feb_silver3.png](https://i.loli.net/2020/02/26/OQFWCNMtSEl1GhX.png)
 
 In my view, this is a tricky problem for contestants in the silver div.
-If we label the nodes Bessie walks through by the timestamps (1, 2, ... len(path)), we can group them by their oddity.
+If we label the nodes Bessie walks through by the timestamps (1, 2, ... len(path)), we can group them by their parity.
 $$|\text{count}(\text{odd}) - \text{count}(\text{even})| = 0 \text{ or } 1$$
 This means a path's contribution (or addition) on odd and even points are the same or different by 1, depends on the starting point.
 Moreover, starting at all points with the same oddity are equivalent, since the clocks are periodical.
-Therefore, the problem can be solved by summing the `time` on odd and even nodes. We can find the oddity of the nodes by arbitrarily picking a node as the root.
+Therefore, the problem can be solved by summing the `time` on odd and even nodes. We can find the parity of the nodes by arbitrarily picking a node as the root.
 
 If sum(odd) = sum(even), Bessie could start at any node.
 If sum(odd) = sum(even) + 1, Bessie could start at any odd node.
@@ -110,10 +114,12 @@ int main()
 # Gold 2
 ![20feb_gold2.png](https://i.loli.net/2020/02/26/tI381KzYUpiVncu.png)
 
-$f(i)$ stands for the count of segments which end at position $i$ over all possible subsets. This ensures the segment with $r=i$ is activated. $cnt_{l/r}$ stands for the count of l/r vertex in range $[1, i)$. With these information we can derive the formula for $f(i)$
+We define $f(i)$ as the count of segments which end at position $i$ over all possible subsets. This ensures the segment with $r=i$ is "activated". $cnt_{l/r}$ stands for the count of l/r vertex in range $[1, i)$. With these information we can derive the formula for $f(i)$:
 $$f(i) = 2^{cnt_r + (N - cnt_l)}$$
 
 Preprocessed the power of $2$ modulo $10^9+7$ before hand, we can evaluate $f(i)$ in $O(1)$ time.
+The answer is therefore $\sum_1^N f(i)$
+
 This solution runs in $O(N)$ time.
 
 ```c++
