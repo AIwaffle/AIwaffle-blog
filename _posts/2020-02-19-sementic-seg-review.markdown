@@ -4,6 +4,8 @@ title:  "A Review on Semantic Segmentation"
 date:   2020-02-19 18:57:00 +0800
 categories: ML
 ---
+Author: Yulun Wu
+
 # Datasets
 * Mapillary Vistas
 * Cityscapes
