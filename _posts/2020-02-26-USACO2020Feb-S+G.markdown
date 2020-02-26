@@ -1,0 +1,249 @@
+---
+layout: post
+title:  "USACO 2020 Feb Contest Silver&Gold Analysis"
+date:   2020-02-26 18:32:00 +0800
+categories: OI
+---
+
+An analysis of USACO 2020 Feb contest, silver + gold
+Source code is provided for gold problems.
+Author: Yulun Wu
+
+# Silver 1
+![20feb_silver1.png](https://i.loli.net/2020/02/26/ng92MFtHiC3pd17.png)
+
+The idea come from *fast power algorithm*.
+We can consider the serie of M transforms as a whole. It is equivalent to mapping a permutation to another.
+Moreover, a permutation transform has the associative property. Therefore we can apply the fast power algorithm, every transform operation takes $O(N)$ and it is done in $O(\log K)$ iterations.
+
+# Silver 2
+![20feb_silver2.png](https://i.loli.net/2020/02/26/HAzN6tPlYV4W3JS.png)
+
+Consider a vertex $v$ , the sum of the area of **all possible triangles right angled at $v$** can be represented by the product of two components:
+$$\text{horizontal component} = \sum_{v \ne i} |x_v - x_i|, y_v = y_i$$
+$$\text{vertical component} = \sum_{v \ne i} |y_v - y_i|, x_v = x_i$$
+Since we want two times the area, 
+$$ans = \text{horizontal component} \times \text{vertical component}$$
+
+We can iterate every rows and columns to possess these components, and store the information of each point by using a `map` from $(x, y)$ to $(\text{component1}, \text{component2})$
+
+The time complexity of the approach is $O(N\log N)$
+
+# Silver 3
+![20feb_silver3.png](https://i.loli.net/2020/02/26/OQFWCNMtSEl1GhX.png)
+
+In my view, this is a tricky problem for contestants in the silver div.
+If we label the nodes Bessie walks through by the timestamps (1, 2, ... len(path)), we can group them by their oddity.
+$$|\text{count}(\text{odd}) - \text{count}(\text{even})| = 0 \text{ or } 1$$
+This means a path's contribution (or addition) on odd and even points are the same or different by 1, depends on the starting point.
+Moreover, starting at all points with the same oddity are equivalent, since the clocks are periodical.
+Therefore, the problem can be solved by summing the `time` on odd and even nodes. We can find the oddity of the nodes by arbitrarily picking a node as the root.
+
+If sum(odd) = sum(even), Bessie could start at any node.
+If sum(odd) = sum(even) + 1, Bessie could start at any odd node.
+If sum(odd) + 1 = sum(even), Bessie could start at any even node.
+else, NONE of the nodes can achieve the quest.
+
+This approach runs in $O(N)$ time.
+
+# Gold 1
+![20feb_gold1.png](https://i.loli.net/2020/02/26/BvGPMjNl5TYOktg.png)
+
+A standard question of *the system of difference constraints*.
+```c++
+// Author: Yulun Wu
+#include <fstream>
+#include <algorithm>
+#include <cstdlib>
+#include <vector>
+using namespace std;
+
+const int MAXN = 100001;
+int N, M, C;
+vector<pair<int, int> > edges[MAXN];
+int dist[MAXN] = {0}, indegree[MAXN] = {0};
+ifstream fin("timeline.in");
+ofstream fout("timeline.out");
+
+void dfs(int u)
+{
+    for (int i = 0; i < edges[u].size(); i++)
+    {
+        int v = edges[u][i].first, w = edges[u][i].second;
+        dist[v] = max(dist[v], dist[u] + w);
+        indegree[v]--;
+        if (indegree[v] == 0)
+        {
+            dfs(v);
+        }
+    }
+}
+
+int main()
+{
+    fin >> N >> M >> C;
+    for (int i = 1; i <= N; i++)
+    {
+        int w;
+        fin >> w;
+        edges[0].push_back(make_pair(i, w));
+        indegree[i]++;
+    }
+
+    for (int i = 1; i <= C; i++)
+    {
+        int a, b, w;
+        fin >> a >> b >> w;
+        edges[a].push_back(make_pair(b, w));
+        indegree[b]++;
+    }
+
+    dfs(0);
+
+    for (int i = 1; i <= N; i++)
+    {
+        fout << dist[i] << endl;
+    }
+}
+```
+
+# Gold 2
+![20feb_gold2.png](https://i.loli.net/2020/02/26/tI381KzYUpiVncu.png)
+
+$f(i)$ stands for the count of segments which end at position $i$ over all possible subsets. This ensures the segment with $r=i$ is activated. $cnt_{l/r}$ stands for the count of l/r vertex in range $[1, i)$. With these information we can derive the formula for $f(i)$
+$$f(i) = 2^{cnt_r + (N - cnt_l)}$$
+
+Preprocessed the power of $2$ modulo $10^9+7$ before hand, we can evaluate $f(i)$ in $O(1)$ time.
+This solution runs in $O(N)$ time.
+
+```c++
+// Author: Yulun Wu
+#include <iostream>
+#include <fstream>
+#include <algorithm>
+#include <cstdlib>
+using namespace std;
+
+const int MOD = (int)1e9 + 7;
+int N;
+bool a[200001];
+int pow2[200001];
+int ans = 0;
+ifstream fin("help.in");
+ofstream fout("help.out");
+
+int main()
+{
+    fin >> N;
+    for (int i = 0; i < N; i++)
+    {
+        int l, r;
+        fin >> l >> r;
+        a[l] = false;
+        a[r] = true;
+    }
+
+    pow2[0] = 1;
+    for (int i = 1; i <= 2 * N; i++)
+    {
+        pow2[i] = 2 * pow2[i - 1] % MOD;
+    }
+
+    int lcnt = 0, rcnt = 0;
+    for (int i = 1; i <= 2 * N; i++)
+    {
+        if (a[i] == true)
+        {
+            ans = (ans + pow2[rcnt + (N - lcnt)]) % MOD;
+        }
+
+        if (a[i] == false)
+            lcnt++;
+        else
+            rcnt++;
+    }
+    fout << ans << endl;
+}
+```
+
+# Gold 3
+![20feb_gold3.png](https://i.loli.net/2020/02/26/2VjI8gwJT6mp4n9.png)
+
+This is a relatively easy problem. 
+
+```c++
+// Author: Yulun Wu
+#include <fstream>
+#include <algorithm>
+#include <cstdlib>
+#include <vector>
+#include <set>
+using namespace std;
+
+const int MAXN = 100001;
+int N, indegree[MAXN] = {0};
+vector<int> edges[MAXN];
+ifstream fin("deleg.in");
+ofstream fout("deleg.out");
+
+int dfs(int u, int parent, int k)
+{
+    multiset<int> s;
+    for (int i = 0; i < edges[u].size(); i++)
+    {
+        if (edges[u][i] == parent)
+            continue;
+
+        int candidate = dfs(edges[u][i], u, k);
+        if (candidate == -1)
+            return -1;
+
+        if (candidate == 0)
+            continue;
+        else if (s.count(k - candidate) >= 1)
+            s.erase(s.find(k - candidate));
+        else
+            s.insert(candidate);
+    }
+
+    if (s.size() == 0)
+        return 1;
+    else if (s.size() == 1)
+        return (1 + *s.begin()) % k;
+    else
+        return -1;
+}
+
+bool solve(int k)
+{
+    int result = dfs(1, 1, k);
+    return result == 1;
+}
+
+int main()
+{
+    fin >> N;
+    for (int i = 0; i < N - 1; i++)
+    {
+        int a, b;
+        fin >> a >> b;
+        edges[a].push_back(b);
+        edges[b].push_back(a);
+        indegree[a]++;
+        indegree[b]++;
+    }
+    if (N > 1)
+    {
+        for (int i = 1; i <= N - 1; i++)
+        {
+            if (i == 1)
+                fout << 1;
+            else if ((N - 1) % i == 0)
+                fout << (solve(i) ? 1 : 0);
+            else
+                fout << 0;
+        }
+    }
+    fout << endl;
+}
+```
