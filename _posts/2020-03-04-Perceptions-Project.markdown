@@ -1,11 +1,9 @@
 ---
 layout: post
 title:  "Perceptions Project"
-date:   2020-02-17 10:21:42 -0500
+date:   2020-03-04 11:52:00 -0500
 categories: ML Art
 ---
-# Perceptions Project
-
 ![Perceptions Logo]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/Perceptions_logo.jpg)
 
 Hi, my name is Kevin Li, a high school senior in New Hampshire, U.S. and a member of the AIwaffle team. I am always interested in the intersection between technology, language, art, and history. Let me start with a traditional tale to introduce my work on Perceptions. On a snowy day 6000 years ago, a man was hunting in the forest. He traced the animal footprints in the snow to look for prey. Suddenly, an idea that had been lingering deep inside his mind flashed a light. He was a knowledgeable historian of his tribe and had been thinking about how to record things like wars and the number of livestock so they can remain consistent long after humans’ memory falters. Inspired by the footprints in the snow, the historian constructed the first Han (Chinese) character called the Oracle characters and since then the language has grown to include 60,000 characters and sophisticated phrases and expressions made from those characters.
