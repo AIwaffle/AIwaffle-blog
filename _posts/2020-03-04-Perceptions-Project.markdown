@@ -6,7 +6,7 @@ categories: ML Art
 ---
 # Perceptions Project
 
-![Perceptions Logo](../assets/images/2020-03-04-Perceptions-Project/Perceptions_logo.jpg)
+![Perceptions Logo]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/Perceptions_logo.jpg)
 
 Hi, my name is Kevin Li, a high school senior in New Hampshire, U.S. and a member of the AIwaffle team. I am always interested in the intersection between technology, language, art, and history. Let me start with a traditional tale to introduce my work on Perceptions. On a snowy day 6000 years ago, a man was hunting in the forest. He traced the animal footprints in the snow to look for prey. Suddenly, an idea that had been lingering deep inside his mind flashed a light. He was a knowledgeable historian of his tribe and had been thinking about how to record things like wars and the number of livestock so they can remain consistent long after humans’ memory falters. Inspired by the footprints in the snow, the historian constructed the first Han (Chinese) character called the Oracle characters and since then the language has grown to include 60,000 characters and sophisticated phrases and expressions made from those characters.
 
@@ -35,13 +35,13 @@ Your task is to find the same objects in 3 columns and connect them.
 
 | Human | Machine | Name |
 |:---------:|:-------:|:------:|
-![hare from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/hare.svg)|![hare from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/hare.png) | ![turtle name](../assets/images/2020-03-04-Perceptions-Project/names/turtle.jpg)|
-![bow from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/bow.svg) |![turtle from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/turtle.png) |![hen name](../assets/images/2020-03-04-Perceptions-Project/names/hen.jpg)|
-![hen from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/hen.svg) |![hen from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/hen.png) |![ox name](../assets/images/2020-03-04-Perceptions-Project/names/ox.jpg)|
-![broom from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/broom.svg) |![bowl from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/bowl.png) |![hare name](../assets/images/2020-03-04-Perceptions-Project/names/hare.jpg)|
-![turtle from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/turtle.svg) |![ox from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/ox.png) |![broom name](../assets/images/2020-03-04-Perceptions-Project/names/broom.jpg)|
-![bowl from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/bowl.svg) |![bow from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/bow.png) | ![bowl name](../assets/images/2020-03-04-Perceptions-Project/names/bowl.jpg)|
-![ox from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/ox.svg) |![broom from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/broom.png) |![bow name](../assets/images/2020-03-04-Perceptions-Project/names/bow.jpg)|
+![hare from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/hare.svg)|![hare from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/hare.png) | ![turtle name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/turtle.jpg)|
+![bow from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/bow.svg) |![turtle from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/turtle.png) |![hen name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/hen.jpg)|
+![hen from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/hen.svg) |![hen from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/hen.png) |![ox name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/ox.jpg)|
+![broom from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/broom.svg) |![bowl from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/bowl.png) |![hare name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/hare.jpg)|
+![turtle from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/turtle.svg) |![ox from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/ox.png) |![broom name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/broom.jpg)|
+![bowl from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/bowl.svg) |![bow from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/bow.png) | ![bowl name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/bowl.jpg)|
+![ox from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/ox.svg) |![broom from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/broom.png) |![bow name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/bow.jpg)|
 
 <br/>
 
@@ -50,15 +50,16 @@ Your task is to find the same objects in 3 columns and connect them.
 <br/>
 
 ## Answer keys
+
 | Human | Machine | Name |
 |:---------:|:-------:|:------:|
-![bow from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/bow.svg)|![bow from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/bow.png) | ![bow name](../assets/images/2020-03-04-Perceptions-Project/names/bow.jpg)|
-![bowl from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/bowl.svg) |![bowl from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/bowl.png) |![bowl name](../assets/images/2020-03-04-Perceptions-Project/names/bowl.jpg)|
-![broom from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/broom.svg) |![broom from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/broom.png) |![broom name](../assets/images/2020-03-04-Perceptions-Project/names/broom.jpg)|
-![hare from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/hare.svg) |![hare from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/hare.png) |![hare name](../assets/images/2020-03-04-Perceptions-Project/names/hare.jpg)|
-![hare from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/hen.svg) |![hen from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/hen.png) |![hare name](../assets/images/2020-03-04-Perceptions-Project/names/hen.jpg)|
-![ox from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/ox.svg) |![ox from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/ox.png) | ![ox name](../assets/images/2020-03-04-Perceptions-Project/names/ox.jpg)|
-![turtle from oracle](../assets/images/2020-03-04-Perceptions-Project/human_perceptions/turtle.svg) |![turtle from machine](../assets/images/2020-03-04-Perceptions-Project/machine_perceptions/turtle.png) |![turtle name](../assets/images/2020-03-04-Perceptions-Project/names/turtle.jpg)|
+![bow from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/bow.svg)|![bow from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/bow.png) | ![bow name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/bow.jpg)|
+![bowl from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/bowl.svg) |![bowl from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/bowl.png) |![bowl name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/bowl.jpg)|
+![broom from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/broom.svg) |![broom from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/broom.png) |![broom name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/broom.jpg)|
+![hare from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/hare.svg) |![hare from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/hare.png) |![hare name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/hare.jpg)|
+![hare from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/hen.svg) |![hen from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/hen.png) |![hare name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/hen.jpg)|
+![ox from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/ox.svg) |![ox from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/ox.png) | ![ox name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/ox.jpg)|
+![turtle from oracle]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/human_perceptions/turtle.svg) |![turtle from machine]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/machine_perceptions/turtle.png) |![turtle name]({{site.baseurl}}/assets/images/2020-03-04-Perceptions-Project/names/turtle.jpg)|
 
 ## Citations
 
