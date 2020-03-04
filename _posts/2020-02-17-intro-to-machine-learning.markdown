@@ -2,7 +2,7 @@
 layout: post
 title:  "Intro to Machine Learning"
 date:   2020-02-17 10:21:42 -0500
-categories: intro
+categories: ML
 ---
 # Intro to Machine Learning
 
