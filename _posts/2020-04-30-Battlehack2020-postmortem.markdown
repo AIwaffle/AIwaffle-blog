@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Battlehack 2020 postmortem, Team IDIOT"
-date:   2020-02-26 18:32:00 +0800
+date:   2020-04-30 13:39:00 +0800
 categories: Competition
 ---
 Author: [Houwang](https://github.com/Houwang123), [Yulun Wu](https://github.com/IDl0T)
