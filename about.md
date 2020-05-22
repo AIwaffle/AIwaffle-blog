@@ -4,15 +4,21 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# AIwaffle
+AIwaffle aims at AI beginners and provides original courses, extensive materials, and periodic blogs on AI, OI, and more.
+All of our contents are open source on [GitHub](https://github.com/AIwaffle) and contributions are welcome.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+If you are interested in giving a try, check out our courses on [aiwaffle.com](https://www.aiwaffle.com/)
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+# Our Team
+
+We are a group of students who are passionate about AI and want to help more people enjoy it's fun.
 
 
-[jekyll-organization]: https://github.com/jekyll
+* [IDIOT](https://github.com/IDl0T) (Yulun Wu)
+* [Kevin Li](https://github.com/AlienKevin) (Kevin Li)
+* [Jimmy Z](https://github.com/jimmy-zx) (Jimmy Zhao)
+* [wlt233](https://github.com/wlt233) (Langtian Wei)
+* [Ni Chujie](https://github.com/nichujie) (Chujie Ni)
+* [xuyinjie](https://github.com/xuyinjiesh) (Yinjie Xu)
+* [Mistakable](https://github.com/MistakableQwQ)
