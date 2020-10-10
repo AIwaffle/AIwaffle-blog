@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Halite 4 on Kaggle postmortem, Team SyncBot ends up in 23rd Silver!"
-date:   2020-04-30 13:39:00 +0800
+date:   2020-10-10 18:34:00 +0800
 categories: Competition
 ---
 Author: [Houwang](https://github.com/Houwang123), [Yulun Wu](https://github.com/IDl0T)
